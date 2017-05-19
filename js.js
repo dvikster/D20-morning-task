@@ -34,15 +34,16 @@ function ckeckNumber() {
             // console.log('Попробуйте еще');
             var leftAttempts = attempts-1;
             var tips;
-            if(valInputNumber > genNumber){
-                tips = 'Нужно меньше. ';
-                massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
-            }
-            else if(valInputNumber < genNumber){
-                tips = 'Нужно больше. ';
-                massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
-            }
-            // massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+            // if(valInputNumber > genNumber){
+            //
+            //     tips = 'Нужно меньше. ';
+            //     massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+            // }
+            // else if(valInputNumber < genNumber){
+            //     tips = 'Нужно больше. ';
+            //     massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+            // }
+            massage.innerHTML = 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
 
         }
     }
