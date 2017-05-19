@@ -33,7 +33,17 @@ function ckeckNumber() {
             valInputNumber = 0;
             // console.log('Попробуйте еще');
             var leftAttempts = attempts-1;
-            massage.innerHTML = 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+            var tips;
+            if(valInputNumber > genNumber){
+                tips = 'Нужно меньше. ';
+                massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+            }
+            else if(valInputNumber < genNumber){
+                tips = 'Нужно больше. ';
+                massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+            }
+            // massage.innerHTML = tips + 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
+
         }
     }
     else{
