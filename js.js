@@ -13,15 +13,14 @@ var attempts ='3';
 var massage = document.getElementById('massage');
 var playAgain= document.getElementById('playAgain');
 
-
 inputNumber.addEventListener('change', ckeckNumber);
 
 function ckeckNumber() {
     if( attempts >= 2 && attempts <=3){
         playAgain.style.display = 'none';
-        console.log('Yes');
+        // console.log('Yes');
         valInputNumber = inputNumber.value;
-        console.log('Попытка:'+ attempts +':'+valInputNumber);
+        // console.log('Попытка:'+ attempts +':'+valInputNumber);
         if( valInputNumber == genNumber){
             console.log('Вы молодец');
             attempts=0;
@@ -32,14 +31,14 @@ function ckeckNumber() {
         }
         else{
             valInputNumber = 0;
-            console.log('Попробуйте еще');
+            // console.log('Попробуйте еще');
             var leftAttempts = attempts-1;
             massage.innerHTML = 'Попробуйте еще. Осталось попыток:'+ leftAttempts;
         }
     }
     else{
-        console.log('Попытка:'+ attempts);
-        console.log('No');
+        // console.log('Попытка:'+ attempts);
+        // console.log('No');
         massage.innerHTML = 'Вы не угадали. Играть еще?';
         playAgain.style.display = 'block';
         attempts=3;
